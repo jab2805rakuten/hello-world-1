@@ -4,9 +4,9 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run:
-         name: Setup Environment Variables
-         command: |
-           echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> $BASH_ENV
+        #  - run:
+         #name: Setup Environment Variables
+         #ommand: |
+         # echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> $BASH_ENV
       - run: docker build -t jab2805rakuten/helloworld-1:${CIRCLE_SHA1} .    
       - run: docker images   
