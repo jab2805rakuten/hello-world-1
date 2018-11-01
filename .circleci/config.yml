@@ -1,0 +1,10 @@
+version: 2 
+jobs: 
+  build:
+    working_directory: ~/tmp      
+    docker:
+      - image: circleci/ruby:7
+    steps:
+      - checkout
+      - run: hellosometghing  
+
