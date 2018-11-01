@@ -1,10 +1,7 @@
 version: 2 
 jobs: 
   build:
-    working_directory: ~/tmp      
-    docker:
-      - image: circleci/ruby:7
+    machine: true
     steps:
       - checkout
-      - run: hellosometghing  
-
+      - run: docker build -t jab2805rakuten/helloworld-1:v0.0.1 .    
