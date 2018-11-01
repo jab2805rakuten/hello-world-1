@@ -4,5 +4,4 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: ls     
-        # - run: docker build -t jab2805rakuten/helloworld-1:v0.0.1 .    
+      - run: docker build -t jab2805rakuten/helloworld-1:v0.0.1 .    
