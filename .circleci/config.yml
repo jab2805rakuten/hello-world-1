@@ -20,6 +20,7 @@ jobs:
       - run:      
          command: |
            login=`$(aws ecr get-login --region us-east-1 --no-include-email)`
+           echo  ${login}
            docker login -u AWS -p ${login}
            docker tag  jab2805rakuten/helloworld-1:v0.01 90O3397269197.dkr.ecr.us-east-1.amazonaws.com/jab2805rakuten/helloworld-1:v0.01
            docker push 90O3397269197.dkr.ecr.us-east-1.amazonaws.com/jab2805rakuten/helloworld-1:v0.01
