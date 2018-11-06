@@ -8,9 +8,9 @@ jobs:
          name: Setup Env
          command: |
               echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> $BASH_ENV   
-      - run: docker build -t jab2805rakuten/helloworld-1:${CIRCLE_SHA1} .    
+      - run: docker build -t jab2805rakuten/helloworld-1:v0.01 .    
       - run: docker images     
-      - run: docker run -p 3000:3000 -d jab2805rakuten/helloworld-1:${CIRCLE_SHA1}     
+      - run: docker run -p 3000:3000 -d jab2805rakuten/helloworld-1:v0.01     
       - run:      
          name: Setup Env
          command: |
